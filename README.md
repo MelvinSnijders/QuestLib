@@ -47,17 +47,13 @@ public class CobblestoneObjective extends QuestObjective {
         if(!this.isFrom(event.getPlayer())) return;
 
         if(event.getBlock().getType() != Material.COBBLESTONE) {
-
             return;
-
         }
 
         this.incrementData("count", 1);
 
         if(this.getDataInt("count") >= 5) {
-
             this.complete();
-
         }
 
     }
@@ -67,6 +63,8 @@ public class CobblestoneObjective extends QuestObjective {
 
 As you can see, with QuestLib you're able to easily create new objectives and register them in your quest.
 QuestLib also saves all the data you provide using `setData()` or `incrementData()` (for integers).
+
+If you want more examples, please have a look at the [Example repository](https://github.com/TheMelvinNL/QuestLib-Example).
 
 ## Documentation
 Please read the [Wiki](https://github.com/TheMelvinNL/QuestLib/wiki) as this library is somewhat hard to understand without it.
