@@ -16,15 +16,14 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
 
-/* TODO
-    Setup storage
-        - running_quests
-    Setup config for choosing storage
- */
-
 public class QuestLib {
 
     private static QuestLib instance;
+
+    /**
+     * Get the instance of the QuestLib.
+     * @return The QuestLib instance.
+     */
 
     public static QuestLib getInstance() {
 
@@ -40,6 +39,12 @@ public class QuestLib {
 
     private JavaPlugin plugin;
     private QuestStorage storage;
+
+    /**
+     * Initiate the library.
+     * @param plugin The main plugin using QuestLib.
+     * @param storage The {@link QuestStorage} storage type object.
+     */
 
     public void init(JavaPlugin plugin, QuestStorage storage) {
 
@@ -71,6 +76,10 @@ public class QuestLib {
 
     }
 
+    /**
+     * Disable the library and save all quests.
+     */
+
     public void disable() {
 
         this.saveAll();
@@ -88,11 +97,23 @@ public class QuestLib {
     private HashMap<String, Class<? extends Quest>> questTypes = new HashMap<>();
     private HashMap<String, Class<? extends QuestObjective>> objectiveTypes = new HashMap<>();
 
+    /**
+     * Register a quest with its class.
+     * @param identifier The identifier used to identify a quest in storage.
+     * @param questClass The class of the quest.
+     */
+
     public void registerQuest(String identifier, Class<? extends Quest> questClass) {
 
         questTypes.put(identifier, questClass);
 
     }
+
+    /**
+     * Register a objective with its class.
+     * @param identifier The identifier used to identify a objective in storage.
+     * @param objectiveClass The class of the objective.
+     */
 
     public void registerObjective(String identifier, Class<? extends QuestObjective> objectiveClass) {
 
@@ -102,12 +123,23 @@ public class QuestLib {
 
     private HashMap<UUID, Quest> runningQuests = new HashMap<>();
 
+    /**
+     * Start a quest for a player.
+     * @param quest The quest to start.
+     * @param player The player to start the quest for.
+     */
+
     public void startQuest(Quest quest, Player player) {
 
         this.runningQuests.put(player.getUniqueId(), quest);
         quest.start(player);
 
     }
+
+    /**
+     * Stop a quest for a player.
+     * @param uuid The UUID of the player to stop the quest for.
+     */
 
     public void stopQuest(UUID uuid) {
 
@@ -116,17 +148,46 @@ public class QuestLib {
 
     }
 
+    /**
+     * Stop a quest for a player.
+     * @param player The player to stop the quest for.
+     */
+
+    public void stopQuest(Player player) {
+
+        this.stopQuest(player.getUniqueId());
+
+    }
+
+    /**
+     * Check if a player currently has a quest running.
+     * @param player The player to check.
+     * @return Whether the player has a quest running.
+     */
+
     public boolean hasQuest(Player player) {
 
         return this.hasQuest(player.getUniqueId());
 
     }
 
+    /**
+     * Check if a player currently has a quest running.
+     * @param uuid The uuid of the player to check.
+     * @return Whether the player has a quest running.
+     */
+
     public boolean hasQuest(UUID uuid) {
 
         return this.runningQuests.containsKey(uuid);
 
     }
+
+    /**
+     * Get the current quest of a player
+     * @param player The player to get the quest from.
+     * @return The current running quest.
+     */
 
     public Quest getQuest(Player player) {
 
