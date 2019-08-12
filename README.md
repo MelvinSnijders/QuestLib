@@ -1,7 +1,7 @@
 # QuestLib
 QuestLib offers you an easy to use questing library for your plugins. This library includes lots of features for you to create quests, objectives and give rewards
 
-*Tested Minecraft versions: 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14*
+*Tested Minecraft versions: 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14*\
 **You can use this library as a plugin or use it as a (shaded) dependency, see the [documentation](https://questlib.themelvin.nl/docs/)**
 
 > Warning: This library has no stable release yet, if you encounter any bugs, please report them in the issues section.
