@@ -64,7 +64,7 @@ public class CobblestoneObjective extends QuestObjective {
 As you can see, with QuestLib you're able to easily create new objectives and register them in your quest.
 QuestLib also saves all the data you provide using `setData()` or `incrementData()` (for integers).
 
-If you want more examples, please have a look at the [Example repository](https://github.com/TheMelvinNL/QuestLib-Example).
+If you want more examples, have a look at the [Example repository](https://github.com/TheMelvinNL/QuestLib-Example).
 
 ## Documentation
 Please read the [Wiki](https://github.com/TheMelvinNL/QuestLib/wiki) as this library is somewhat hard to understand without it.
@@ -72,7 +72,7 @@ Please read the [Wiki](https://github.com/TheMelvinNL/QuestLib/wiki) as this lib
 ## Setup
 1. Download and install [Gradle](https://gradle.org/).
 1. Import the repo as **Gradle** project.
-1. Run [BuildTools](https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar) 1.8.8 `java -jar BuildTools.jar --rev 1.9.4`.
+1. Run [BuildTools](https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar) 1.8.8 `java -jar BuildTools.jar --rev 1.8.8`.
 4. Compile: `gradle build`
 
 ## Contributing
