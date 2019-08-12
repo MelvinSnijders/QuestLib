@@ -1,7 +1,18 @@
 # QuestLib
 QuestLib offers you an easy to use questing library for your plugins. This library includes lots of features for you to create quests, objectives and give rewards
 
+*Tested Minecraft versions: 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14*
+**You can use this library as a plugin or use it as a (shaded) dependency, see the [documentation](https://questlib.themelvin.nl/docs/)**
+
 > Warning: This library has no stable release yet, if you encounter any bugs, please report them in the issues section.
+
+## Features
+* Built-in YAML or MySQL storage.
+* Custom reward types.
+* Multiple custom objectives.
+* Easily configurable.
+* Customisable to your own wishes.
+* Extensive API.
 
 ## Example
 Quest class:
@@ -67,7 +78,7 @@ QuestLib also saves all the data you provide using `setData()` or `incrementData
 If you want more examples, have a look at the [Example repository](https://github.com/TheMelvinNL/QuestLib-Example).
 
 ## Documentation
-Please read the [Wiki](https://github.com/TheMelvinNL/QuestLib/wiki) as this library is somewhat hard to understand without it.
+Please read the [Wiki](https://questlib.themelvin.nl/docs/) as this library is somewhat hard to understand without it.
 
 ## Setup
 1. Download and install [Gradle](https://gradle.org/).
