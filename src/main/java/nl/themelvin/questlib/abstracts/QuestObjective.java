@@ -117,9 +117,10 @@ public abstract class QuestObjective implements Listener {
      * @return The stored data.
      */
 
-    public double getDataNumber(String key) {
+    public int getDataNumber(String key) {
 
-        return (double) this.data.get(key);
+        Double temp = (double) this.data.get(key);
+        return temp.intValue();
 
     }
 
