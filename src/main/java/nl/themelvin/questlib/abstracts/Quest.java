@@ -328,5 +328,5 @@ public abstract class Quest {
     public void setUuid(UUID uuid) {
         this.uuid = uuid;
     }
-    
+
 }
