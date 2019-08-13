@@ -56,6 +56,10 @@ public class MySQL implements QuestStorage {
 
     }
 
+    /**
+     * Get a new MySQL connection.
+     * @return A new connection.
+     */
 
     private Connection getConnection() {
 

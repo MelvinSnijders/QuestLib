@@ -7,6 +7,11 @@ public class MultiReward extends Reward {
 
     private Reward[] rewards;
 
+    /**
+     * Reward that combines multiple rewards.
+     * @param rewards The rewards to combine.
+     */
+
     public MultiReward(Reward... rewards) {
 
         this.rewards = rewards;

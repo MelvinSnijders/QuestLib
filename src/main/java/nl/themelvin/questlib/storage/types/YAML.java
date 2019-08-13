@@ -107,6 +107,10 @@ public class YAML implements QuestStorage {
 
     }
 
+    /**
+     * Save the file configuration.
+     */
+
     public void save() {
 
         try {

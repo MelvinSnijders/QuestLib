@@ -11,12 +11,23 @@ public class ItemReward extends Reward {
     private ItemStack item;
     private String message;
 
+    /**
+     * Reward that gives an item and sends a message.
+     * @param item The item to give.
+     * @param message The message to send.
+     */
+
     public ItemReward(ItemStack item, String message) {
 
         this.item = item;
         this.message = message;
 
     }
+
+    /**
+     * Reward that gives an item.
+     * @param item The item to give.
+     */
 
     public ItemReward(ItemStack item) {
 

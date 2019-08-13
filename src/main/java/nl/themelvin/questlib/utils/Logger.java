@@ -5,17 +5,33 @@ import org.bukkit.ChatColor;
 
 public class Logger {
 
+    /**
+     * Convert all colors in a message.
+     * @param message The message to convert the color codes from.
+     * @return The converted string.
+     */
+
     public static String __(String message) {
 
         return ChatColor.translateAlternateColorCodes('&', message);
 
     }
 
+    /**
+     * Log a message to the console.
+     * @param severity The severity of the message.
+     * @param message The message to send.
+     */
+
     public static void log(Severity severity, String message) {
 
         Bukkit.getServer().getConsoleSender().sendMessage(__(severity.prefix + "&r" + message));
 
     }
+
+    /**
+     * Enum with severities.
+     */
 
     public enum Severity {
 

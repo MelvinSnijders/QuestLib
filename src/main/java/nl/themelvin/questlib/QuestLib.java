@@ -195,11 +195,21 @@ public class QuestLib {
 
     }
 
+    /**
+     * Get the current quest of a player
+     * @param uuid The UUID of the player to get the quest from.
+     * @return The current running quest.
+     */
+
     public Quest getQuest(UUID uuid) {
 
         return this.runningQuests.get(uuid);
 
     }
+
+    /**
+     * Save all cached quests.
+     */
 
     public void saveAll() {
 
@@ -232,6 +242,13 @@ public class QuestLib {
         }
 
     }
+
+    /**
+     * Load all quests from storage.
+     * @throws NoSuchMethodException Thrown when the quest has no empty constructor.
+     * @throws IllegalAccessException Thrown when the accessibility of the quest class is not public.
+     * @throws InstantiationException Thrown when QuestLib could not instantiate a new quest object.
+     */
 
     public void loadAll() throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
 
@@ -275,11 +292,21 @@ public class QuestLib {
 
     }
 
+    /**
+     * Get the storage object.
+     * @return The storage object.
+     */
+
     public QuestStorage getStorage() {
 
         return storage;
 
     }
+
+    /**
+     * Get the plugin that QuestLib is using.
+     * @return The plugin.
+     */
 
     public JavaPlugin getPlugin() {
 
